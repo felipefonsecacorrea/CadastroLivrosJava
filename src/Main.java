@@ -16,12 +16,12 @@ public class Main {
         String nomeUsuario;
         int opcao;
 
-        do {
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("Bem-vindo usuario ! Qual seu nome ?");
+        nomeUsuario = scanner.next();
+        System.out.println(" ");
 
-            System.out.println("----------------------------------------------------------------");
-            System.out.println("Bem-vindo usuario ! Qual seu nome ?");
-            nomeUsuario = scanner.next();
-            System.out.println(" ");
+        do {
             System.out.println("----------------------------------------------------------------");
             System.out.println(nomeUsuario.toUpperCase(Locale.ROOT) + " Escolha uma opção:");
             System.out.println("1 - Cadastrar um novo livro ao sistema");
@@ -79,11 +79,16 @@ public class Main {
                     }
                     ///////////////// fim case 1
 
-
                 case 2:
 
                     if (listaLivro.size() > 0 ){
-
+                        for (Livro cadaLivro : listaLivro){
+                            System.out.println("Nome: " + cadaLivro.titulo);
+                            System.out.println("Preço: R$" + cadaLivro.preco);
+                            System.out.println("Data de lançamento: " + cadaLivro.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+                            System.out.println("Autor: " + cadaLivro.autor.nomeAutor);
+                            System.out.println("Digite 0 para continuar");
+                        }
                     }else {
                         System.out.println(nomeUsuario.toUpperCase(Locale.ROOT) + " lista vazia !");
                     }
