@@ -87,7 +87,7 @@ public class Main {
                             System.out.println("Preço: R$" + cadaLivro.preco);
                             System.out.println("Data de lançamento: " + cadaLivro.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
                             System.out.println("Autor: " + cadaLivro.autor.nomeAutor);
-                            System.out.println("Digite 0 para continuar");
+                            System.out.println("...");
                         }
                     }else {
                         System.out.println(nomeUsuario.toUpperCase(Locale.ROOT) + " lista vazia !");
